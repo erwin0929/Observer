@@ -1,0 +1,55 @@
+// vantui 样式补丁
+.van-toast{
+  width: auto;
+}
+
+.van-loading{
+  @size: 80px;
+  width: @size;
+  height: @size;
+}
+// 弹窗样式修改
+.van-dialog{
+  .van-dialog__header{
+    font-size: 31px;
+  }
+  .van-dialog__message{
+    font-size: 29px; /*px*/
+  }
+  .van-button__text{
+    font-size: 28px;
+  }
+  .van-dialog__footer{
+    height: 65px;
+    align-items: center;
+  }
+  .van-button--large{
+    height: 100%;
+  }
+}
+.van-toast--default{
+  padding: 30px;
+  .van-toast__text{
+    font-size: 27px;
+  }
+}
+.van-picker__cancel,
+.van-picker__confirm{
+  font-size: 30px;
+}
+.van-picker__title{
+  font-size: 30px;
+}
+.van-picker__toolbar{
+  height: 85px;
+  display: flex;
+  align-items: center;
+}
+.van-picker-column{
+  font-size: 30px;
+}
+.van-cell__title{
+  height: 85px;
+  display: flex;
+  align-items: center;
+}

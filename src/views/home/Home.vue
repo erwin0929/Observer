@@ -1,0 +1,1 @@
+<template>  <section class="home-page">		<div>12321</div>  </section></template><script>export default {	data () {		return {		}	},	created () {	  console.log(this)	}}</script><style>	.aaa{		color: #000;		line-height: 55px;		background-color: #f39800;		margin: 10px 0;	}</style>

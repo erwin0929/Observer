@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
+  <link rel="icon" href="<%= BASE_URL %>favicon.ico">
+  <title><% VUE_APP_TITLE %></title>
+  <style>
+    .loader-1 .loader-outter { position: absolute; border: 4px solid #f50057; border-left-color: transparent; border-bottom: 0; width: 100%; height: 100%; border-radius: 50%; -webkit-animation: loader-1-outter 1s cubic-bezier(.42, .61, .58, .41) infinite; animation: loader-1-outter 1s cubic-bezier(.42, .61, .58, .41) infinite; }
+    .loader-1 .loader-inner { position: absolute; border: 4px solid #f50057; border-radius: 50%; width: 40px; height: 40px; left: calc(50% - 20px); top: calc(50% - 20px); border-right: 0; border-top-color: transparent; -webkit-animation: loader-1-inner 1s cubic-bezier(.42, .61, .58, .41) infinite; animation: loader-1-inner 1s cubic-bezier(.42, .61, .58, .41) infinite; }
+    .loader { position: relative; width: 60px; height: 60px; border-radius: 50%; margin: 15px; display: inline-block; vertical-align: middle; }
+    @-webkit-keyframes loader-1-outter {
+      0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+      }
+      100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+      }
+    }
+    @keyframes loader-1-outter {
+      0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+      }
+      100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+      }
+    }
+    @-webkit-keyframes loader-1-inner {
+      0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+      }
+      100% {
+        -webkit-transform: rotate(-360deg);
+        transform: rotate(-360deg);
+      }
+    }
+    @keyframes loader-1-inner {
+      0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+      }
+      100% {
+        -webkit-transform: rotate(-360deg);
+        transform: rotate(-360deg);
+      }
+    }
+    .loading{
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate3d(-50%, -50%, 0);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+    .notice{
+      text-align: center;
+    }
+
+    .loader{
+      position: relative;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      margin: 25px;
+      display: inline-block;
+      vertical-align: middle;
+    }
+    .loader-2 .loader-circles {
+      width: 8px;
+      height: 8px;
+      background: #f50057;
+      border-radius: 50%;
+      position: absolute;
+      left: calc(50% - 4px);
+      top: calc(50% - 4px);
+      -webkit-transition: all 1s ease;
+      transition: all 1s ease;
+      -webkit-animation: loader-2-circles 1s ease-in-out alternate infinite;
+      animation: loader-2-circles 1s ease-in-out alternate infinite;
+    }
+    @-webkit-keyframes loader-2-circles {
+      0% {
+        box-shadow: 0 0 0 #f50057;
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+      }
+      50% {
+        box-shadow: 24px -22px #f50057, 30px -15px 0 -3px #f50057, 31px 0px #f50057, 29px 9px 0 -3px #f50057, 24px 23px #f50057, 17px 30px 0 -3px #f50057, 0px 33px #f50057, -10px 28px 0 -3px #f50057, -24px 22px #f50057, -29px 14px 0 -3px #f50057, -31px -3px #f50057, -30px -11px 0 -3px #f50057, -20px -25px #f50057, -12px -30px 0 -3px #f50057, 5px -29px #f50057, 13px -25px 0 -3px #f50057;
+        -webkit-transform: rotate(180deg);
+        transform: rotate(180deg);
+      }
+      100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+        box-shadow: 25px -22px #f50057, 15px -22px 0 -3px black, 31px 2px #f50057, 21px 2px 0 -3px black, 23px 25px #f50057, 13px 25px 0 -3px black, 0px 33px #f50057, -10px 33px 0 -3px black, -26px 24px #f50057, -19px 17px 0 -3px black, -32px 0px #f50057, -23px 0px 0 -3px black, -25px -23px #f50057, -16px -23px 0 -3px black, 0px -31px #f50057, -2px -23px 0 -3px black;
+      }
+    }
+    @keyframes loader-2-circles {
+      0% {
+        box-shadow: 0 0 0 #f50057;
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+      }
+      50% {
+        box-shadow: 24px -22px #f50057, 30px -15px 0 -3px #f50057, 31px 0px #f50057, 29px 9px 0 -3px #f50057, 24px 23px #f50057, 17px 30px 0 -3px #f50057, 0px 33px #f50057, -10px 28px 0 -3px #f50057, -24px 22px #f50057, -29px 14px 0 -3px #f50057, -31px -3px #f50057, -30px -11px 0 -3px #f50057, -20px -25px #f50057, -12px -30px 0 -3px #f50057, 5px -29px #f50057, 13px -25px 0 -3px #f50057;
+        -webkit-transform: rotate(180deg);
+        transform: rotate(180deg);
+      }
+      100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+        box-shadow: 25px -22px #f50057, 15px -22px 0 -3px black, 31px 2px #f50057, 21px 2px 0 -3px black, 23px 25px #f50057, 13px 25px 0 -3px black, 0px 33px #f50057, -10px 33px 0 -3px black, -26px 24px #f50057, -19px 17px 0 -3px black, -32px 0px #f50057, -23px 0px 0 -3px black, -25px -23px #f50057, -16px -23px 0 -3px black, 0px -31px #f50057, -2px -23px 0 -3px black;
+      }
+    }
+  </style>
+</head>
+<body>
+<noscript>
+  <strong>We're sorry but P doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
+</noscript>
+<div id="app">
+  <section class="loading">
+    <div class="notice">首次加载,耐心等待</div>
+    <div class="loader loader-1">
+      <div class="loader-outter"></div>
+      <div class="loader-inner"></div>
+    </div>
+  </section>
+</div>
+</body>
+</html>
