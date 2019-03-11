@@ -1,9 +1,9 @@
 <template>
 	<section id="abc">
-		我靠
+		测试数据
 		<div e-text="list" class="zzz" id="show">
 			<span>
-				<a href="#">我透</a>
+				<a href="#">阿萨德</a>
 			</span>
 		</div>
 		<p>{ojbk}</p>
@@ -60,7 +60,7 @@ export default {
     class Watcher {
 			constructor(vm, exp, cb) {
 			  Object.assign(this, {vm, exp, cb})
-        // 此处为了触发属性的getter，从而在dep添加自己，结合Observer更易理解
+        // 此处为了触发属性的getter，从而在dep添加自己
 				this.value = this.get()
 			}
 
